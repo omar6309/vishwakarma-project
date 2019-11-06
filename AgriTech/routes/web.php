@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/vegetables',function(){
+    return view('products.vegetables');
+});
+Route::get('/fruits',function(){
+    return view('products.fruits');
+});
+Route::get('/grains',function(){
+    return view('products.grains');
+});
+
+Route::get('/seller/home','ExecutiveController@home');

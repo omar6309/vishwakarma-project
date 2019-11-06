@@ -1,23 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+        <div style="padding-left:15px;padding-top:15px;">
+            <div class="heading">
+                <h1 style="text-align:center;color:black;"><b>SHOP BY CATERGORY</b></h1>
+            </div>
+            <div class="main" style="padding-left:200px;padding-top:35px;">
+                <!--cards -->
+                <div class="card" style="display: inline-block; ">
+                    <a href="/vegetables">
+                        <div class="image">
+                            <img src="{{url('assets/images/category/veg.jpg')}}">
                         </div>
-                    @endif
-
-                    You are logged in!
+                        <div class="title">
+                            <small><b>VEGIES</b></small>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" style="display: inline-block;">
+                    <a href="/fruits">
+                        <div class="image">
+                            <img src="{{url('assets/images/category/fruits.jpg')}}">
+                        </div>
+                        <div class="title">
+                            <small><b>FRUITS</b></small>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" style="display: inline-block;">
+                    <a href="/grains">
+                        <div class="image">
+                            <img src="{{url('assets/images/category/grains.jpg')}}">
+                        </div>
+                        <div class="title">
+                            <small><b>GRAINS</b></small>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
+            <div>
+            </div>
     </div>
-</div>
-@endsection
+    @endsection
