@@ -5,7 +5,7 @@
 use App\item;
 use Faker\Generator as Faker;
 
-$factory->define(item::class, function (Faker $faker) {
+$factory->define(product::class, function (Faker $faker) {
     return [
         //
     ];
