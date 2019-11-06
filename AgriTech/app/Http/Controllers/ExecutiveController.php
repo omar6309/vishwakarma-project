@@ -82,4 +82,8 @@ class ExecutiveController extends Controller
     {
         //
     }
+
+    public function home(){
+        return view('seller.home');
+    }
 }
