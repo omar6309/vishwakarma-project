@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\item;
+use App\product;
+use App\farmer;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -81,5 +82,60 @@ class ProductController extends Controller
     public function destroy(item $product)
     {
         //
+    }
+
+    public function getsellerslist(Request $request){
+        $products = product::where('sub_cat_id_fk',$request['cat_id'])->get();
+        $data='';
+        $i=0;
+        $price=0;
+        $village='';
+        $name='';
+        foreach($products as $product){
+            $seller = farmer::where('id',$product->farmer_id_fk)->first();
+            $data=$data."<option value=".$seller->id.">".$seller->name."</option>";
+            if($i==0){
+                $price = $product->price;
+                $i=1;
+                $village = $seller->address;
+                $name = $seller->name;
+            }
+        }
+        $response=[];
+        $response[0]=$data;
+        $response[1]=$price;
+        $response[2]=$village;
+        $response[3]=$name;
+        return ($response);
+    }
+
+    public function getsellerprice(Request $request){
+        $product = product::where('id',$request['seller_id'])->first();
+        $seller = farmer::where('id',$product->farmer_id_fk)->first();
+        $response=[];
+        $response[0] = $product->price;
+        $response[1]= $seller->name;
+        $response[2] = $seller->address;
+        $response[3] = $seller->mobile;
+        return $response;
+    }
+
+    public function getsellersbyquantity(Request $request){
+        $products = product::where('quantity',$request['quantity'])->get();
+        $data='';
+        $i=0;
+        $price=0;
+        foreach($products as $product){
+            $seller = farmer::where('id',$product->farmer_id_fk)->first();
+            $data=$data."<option value=".$seller->id.">".$seller->name."</option>";
+            if($i==0){
+                $price = $product->price;
+                $i=1;
+            }
+        }
+        $response=[];
+        $response[0]=$data;
+        $response[1]=$price;
+        return ($response);
     }
 }

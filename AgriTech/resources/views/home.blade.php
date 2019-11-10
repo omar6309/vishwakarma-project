@@ -7,6 +7,7 @@
             </div>
             <div class="main" style="padding-left:200px;padding-top:35px;">
                 <!--cards -->
+                <div id="card">
                 <div class="card" style="display: inline-block; ">
                     <a href="/vegetables">
                         <div class="image">
@@ -37,6 +38,7 @@
                         </div>
                     </a>
                 </div>
+            </div>
             </div>
             <div>
             </div>

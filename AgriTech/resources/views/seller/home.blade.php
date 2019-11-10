@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="">
-    <button id="register" class="button">Register</button>
-    <button id="register" class="button">Sell</button>
+    <a href="{{url('farmer/register')}}"><button id="register" class="button">Register</button></a>
+    <a href="{{url('farmer/sell')}}"><button id="register" class="button">Sell</button></a>
 </div>
     
 @endsection

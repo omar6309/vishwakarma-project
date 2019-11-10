@@ -16,7 +16,7 @@ class CreateFarmersTable extends Migration
         Schema::create('farmers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('age');
+            $table->date('dob');
             $table->integer('mobile');
             $table->enum('gender', array(0, 1))->comment('0=>male 1=>female');
             $table->bigInteger('adhaar');

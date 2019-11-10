@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\transporter;
 use Illuminate\Http\Request;
 
-class TransporterController extends Controller
+class BankAccountController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +40,10 @@ class TransporterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\transporter  $transporter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(transporter $transporter)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class TransporterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\transporter  $transporter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(transporter $transporter)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class TransporterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\transporter  $transporter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, transporter $transporter)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,15 +74,11 @@ class TransporterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\transporter  $transporter
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transporter $transporter)
+    public function destroy($id)
     {
         //
-    }
-
-    public function home(){
-        return view('transporter.home');
     }
 }

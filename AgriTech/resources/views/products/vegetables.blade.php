@@ -9,8 +9,8 @@
 <div class="main">
 
     <!--cards -->
-
-
+<a href="{{url('vegetables/details')}}">
+    <div id="card">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -19,13 +19,12 @@
         <div class="title">
             <h1>Tomato</h1>
         </div>
-        <div class="des">
-            <p>price : 50/kg</p>
-        </div>
+        
     </div>
+</a>
     <!--cards -->
 
-
+    <a href="{{url('vegetables/details')}}">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -34,13 +33,12 @@
         <div class="title">
             <h1>Brinjal</h1>
         </div>
-        <div class="des">
-            <p>Price : 20/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
 
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -49,12 +47,11 @@
         <div class="title">
             <h1>Cucumber</h1>
         </div>
-        <div class="des">
-            <p>Price : 12/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
 
     <div class="card" style="display: inline-block;">
 
@@ -64,12 +61,11 @@
         <div class="title">
             <h1>Beetroot</h1>
         </div>
-        <div class="des">
-            <p>Price : 23/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
 
     <div class="card" style="display: inline-block;">
 
@@ -79,12 +75,11 @@
         <div class="title">
             <h1>Pumpkin</h1>
         </div>
-        <div class="des">
-            <p>Price : 32/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -93,12 +88,11 @@
         <div class="title">
             <h1>Lettuce</h1>
         </div>
-        <div class="des">
-            <p>Price : 10/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -107,13 +101,11 @@
         <div class="title">
             <h1>Radish</h1>
         </div>
-        <div class="des">
-            <p>Price : 20/kg</p>
-
-        </div>
+        
     </div>
     <!--cards -->
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
 
     <div class="card" style="display: inline-block;">
 
@@ -123,13 +115,12 @@
         <div class="title">
             <h1>Chili</h1>
         </div>
-        <div class="des">
-            <p>Price : 15/kg</p>
-        </div>
+        
     </div>
     <!--cards -->
 
-
+    </a>
+    <a href="{{url('vegetables/details')}}">
     <div class="card" style="display: inline-block;">
 
         <div class="image">
@@ -138,9 +129,9 @@
         <div class="title">
             <h1>Corn</h1>
         </div>
-        <div class="des">
-            <p>Price : 23/kg</p>
-        </div>
+    
     </div>
+    </div>
+</a>
 </div>
 @endsection

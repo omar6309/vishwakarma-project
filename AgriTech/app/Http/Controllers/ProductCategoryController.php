@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\product_category;
+use App\product_sub_category;
 use Illuminate\Http\Request;
 
 class ProductCategoryController extends Controller
@@ -81,5 +82,15 @@ class ProductCategoryController extends Controller
     public function destroy(product_category $product_category)
     {
         //
+    }
+
+    public function getChildCategories(Request $request){
+        $child_categories = product_sub_category::where('parent_cat_id_fk',$request['parent_id'])->get();
+
+        $data='';
+        foreach($child_categories as $child_category){
+            $data=$data."<option value=".$child_category->id.">".$child_category->name."</option>";
+        }
+        return ($data);
     }
 }

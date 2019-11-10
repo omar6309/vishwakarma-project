@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->float('quantity');
+            $table->string('units',10);
             $table->float('price');
             $table->bigInteger('farmer_id_fk')->references('id')->on('farmers');
             $table->enum('status', array(0, 1))->comment('0=>unsold 1=>sold');

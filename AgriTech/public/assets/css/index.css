@@ -9,7 +9,6 @@
  
   margin: 2%;
  }
- 
  #card .card{
       width: 20%;
       display: inline-block;
@@ -23,11 +22,19 @@
    border-top-right-radius: 5px;
    border-top-left-radius: 5px;
   }
-
+  .container1
+  {
+    padding-top:100px;
+    padding-left: 500px;
+    width:400px;
+    height:400px;
+    margin:100px auto;
+    
+  }
  
  .title{
-  
-   text-align: center;
+    
+    text-align: center;
    padding: 10px;
    
   }
@@ -45,7 +52,6 @@
    border-bottom-left-radius: 5px;
  }
  button{
-   margin-top: 40px !;
    margin-bottom: 10px;
    background-color: white;
    border: 1px solid black;
@@ -53,12 +59,12 @@
    padding:10px;
  }
  .custom-align-center{
-   display: flex !important;
-   margin-right: auto !important;
-   margin-left: auto !important;
- }
+    display: flex !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
  button:hover{
-   background-color: black;
+   background-color: #00cc00;
    color: white;
    transition: .5s;
    cursor: pointer;
@@ -67,6 +73,17 @@
  .heading::after{
   content: " ";
   width: 25rem;
+  height: .5rem;
+  background-color: #45e19f;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius: 2rem;
+}
+
+.headingl::after{
+  content: " ";
+  width: 12rem;
   height: .5rem;
   background-color: #45e19f;
   position:absolute;
@@ -118,3 +135,120 @@ transition: 0.3s;
   clear: both;
   display: table;
 }
+
+.modal-login {		
+  color: #636363;
+  width: 350px;
+}
+.modal-login .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-login .modal-header {
+  border-bottom: none;   
+  position: relative;
+justify-content: center;
+}
+.modal-login h4 {
+text-align: center;
+font-size: 26px;
+margin: 30px 0 -15px;
+}
+.modal-login .form-control:focus {
+border-color: #70c5c0;
+}
+.modal-login .form-control, .modal-login .btn {
+min-height: 40px;
+border-radius: 3px; 
+}
+.modal-login .close {
+position: absolute;
+top: -5px;
+right: -5px;
+}	
+.modal-login .modal-footer {
+background: #ecf0f1;
+border-color: #dee4e7;
+text-align: center;
+justify-content: center;
+margin: 0 -20px -20px;
+border-radius: 5px;
+font-size: 13px;
+}
+.modal-login .modal-footer a {
+color: #999;
+}		
+.modal-login .avatar {
+position: absolute;
+margin: 0 auto;
+left: 0;
+right: 0;
+top: -70px;
+width: 95px;
+height: 100px;
+border-radius: 50%;
+z-index: 9;
+background: #fff;
+padding: 15px;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-login .avatar img {
+  margin-top: 10px;
+height: 50px;
+width: 100%;
+}
+.modal-login.modal-dialog {
+margin-top: 80px;
+}
+.modal-login .btn {
+color: #fff;
+border-radius: 4px;
+background: #60c7c1;
+text-decoration: none;
+transition: all 0.4s;
+line-height: normal;
+border: none;
+}
+.modal-login .btn:hover, .modal-login .btn:focus {
+background: #45aba6;
+outline: none;
+}
+.trigger-btn {
+display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

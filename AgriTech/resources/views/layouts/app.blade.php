@@ -30,7 +30,7 @@
 <body>
     <!--NavBar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-gray">
-        <a class="navbar-brand" href="#"><b>AGRITECH</b></a>
+            <a class="navbar-brand" href="#"><img src="{{url('assets/images/at.png')}}" alt="Smiley face" height="60" width="60"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,20 +38,24 @@
         <div class="collapse navbar-collapse sticky-top" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="{{url('/home')}}"><b>Home</b> <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="{{url('/features')}}"><b>Features</b></a>
-                <a class="nav-item nav-link" href="{{url('/pricing')}}"><b>Pricing</b></a>
+                <a class="nav-item nav-link" href="{{url('/features')}}"><b>About</b></a>
+                <a class="nav-item nav-link" href="{{url('/pricing')}}"><b>Contact</b></a>
+                <a class="nav-item nav-link" href="{{url('/pricing')}}"><b>Help</b></a>
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
+                    <span >
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <button class="btn btn-sm" type="button"><a href="#login" style="color: black;">LOG IN</a></button>
+                        <button class="btn btn-sm" type="button" ><a href="#reg" style="color: black;">REGISTER</a></button>
                     </li>
                     @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        
                     </li>
                     @endif
                     @else
+                </ul>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -70,7 +74,7 @@
                         </div>
                     </li>
                     @endguest
-                </ul>
+                
             </div>
         </div>
     </nav>
@@ -81,8 +85,8 @@
     <!--footer-->
     <div>
         <footer class="page-footer font-small grey sticky-bottom" style="margin-top:40px;">
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> Agritech.com</a>
             </div>
     </div>
 
